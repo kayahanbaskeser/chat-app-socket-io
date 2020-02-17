@@ -1,0 +1,43 @@
+body {
+    background-color: #47646f;
+    color: #d9d9dd;
+    font-family: Poppins, sans-serif;
+}
+
+.userList {
+    font-size: 20px;
+}
+
+.userList ul li {
+    font-size: 16px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.chatArea {
+    overflow-y: scroll;
+}
+
+a, a:hover{
+    color:white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+    
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey; 
+    border-radius: 2px;
+}
+    
+::-webkit-scrollbar-thumb {
+    background:black; 
+    border-radius: 2px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background:rgb(54, 56, 58); 
+}

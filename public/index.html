@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SocketIO Sample App | kB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mainArea" style="margin-top: 200px" hidden>
+        <div class="row">
+            <div class="col-sm-2 userList">
+                <div class="row navbar">
+                    Online User List
+                </div>
+                <div class="row">
+                    <ul id="userList" style="width: 100%;">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div class="container">
+                    <div class="row chatArea" 
+                        style="background-color:white;color: black;">
+                        <ul style="height: 150px; padding-top: 20px;" id="publicChat"></ul>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <input type="text-input" class=".d-sm-block form-control" placeholder="... "
+                                id="sendMessageText" />
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" onclick="sendMessage()">Send</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fade" role="dialog" style="color: black;" data-backdrop="static"
+        data-keyboard="false">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <input id="name-input" class="text-input text-center form-control" type="text" name="name-input"
+                        autocomplete="off">
+                    <button onclick="login()" class="btn btn-outline-secondary btn-block" style="margin-top:5px;">
+                        Login
+                    </button>
+                    <p class="informationBox" style="text-align:center;margin-top: 7px;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/mainJs.js"></script>
+</body>
+
+</html>
